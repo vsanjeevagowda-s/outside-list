@@ -11,3 +11,23 @@
   text-decoration: line-through;
   color: red;
 }
+
+.header{
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.pos-rel{
+  position: relative;
+}
+
+.pos-abs{
+  position: absolute;
+}
+
+.check-uncheck-box{
+  top: 50px;
+  right: 0;
+  width: 40%;
+}
