@@ -33,9 +33,6 @@ class Item extends Component {
       })
     })
     .catch(error => console.log('[ error ]: ', error));
-    // item.checked = !item.checked;
-    // this.setState({ item })
-    
   }
 
   render() {
@@ -44,10 +41,13 @@ class Item extends Component {
       <div className='row'>
         <div className='col-md-10'>
           <li className="list-group-item">
-            <span className={(item.checked === true) ? 'text-light' : ''}>{item.title}</span>
-            <span className='float-right cursor-pointer border-left pl-2' onClick={() => this.onCheck(item)}>
+            <span className={(item.checked === true) ? 'item-checked' : ''}>{item.title}</span>
+            {item.checked && <span className='float-right cursor-pointer border-left pl-2' onClick={() => this.onCheck(item)}>
+              <i className="fa fa-times text-danger"></i>
+            </span>}
+            {!item.checked && <span className='float-right cursor-pointer border-left pl-2' onClick={() => this.onCheck(item)}>
               <i className="fa fa-check"></i>
-            </span>
+            </span>}
           </li>
         </div>
       </div>

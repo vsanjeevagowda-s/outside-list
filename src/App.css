@@ -6,3 +6,8 @@
 .cursor-pointer{
   cursor: pointer;
 }
+
+.item-checked{
+  text-decoration: line-through;
+  color: red;
+}
